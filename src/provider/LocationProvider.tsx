@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { LocationContext } from "../context";
 
-const LocationProvider = ({ children }) => {
+interface LocationProviderProps {
+  children: React.ReactNode;
+}
+const LocationProvider = ({ children }: LocationProviderProps) => {
   const [selectedLocation, setSelectedLocation] = useState({
     location: "",
     latitude: 0,

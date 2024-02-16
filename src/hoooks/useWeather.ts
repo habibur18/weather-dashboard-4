@@ -93,13 +93,17 @@ const useWeather = () => {
       state: true,
       message: "Finding your location...",
     });
-    // Todo: Get user location
-    navigator.geolocation.getCurrentPosition((position) => {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      fetchWeather(latitude, longitude);
-    });
-  }, []);
+
+    if (selectedLocation.latitude && selectedLocation.longitude) {
+      fetchWeather(selectedLocation.latitude, selectedLocation.longitude);
+    } else {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        fetchWeather(latitude, longitude);
+      });
+    }
+  }, [selectedLocation.latitude, selectedLocation.longitude]);
 
   return { weatherData, loading, error };
 };

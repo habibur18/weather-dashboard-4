@@ -36,7 +36,7 @@ function getWeatherIcon(climate: string): string {
   }
 }
 export default function WeatherHeadline() {
-  const { weatherData, loading } = useContext(WeatherContext);
+  const { weatherData } = useContext(WeatherContext);
   const { climate, location, temperature, time } = weatherData;
   return (
     <div>
