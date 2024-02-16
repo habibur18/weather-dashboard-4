@@ -14,7 +14,7 @@ interface LocationContextType {
 interface FavouriteContextType {
   removeFromFavourite: (location: string) => void;
   addToFavourite: (lat: number, long: number, location: string) => void;
-  favourite: Location[]; // Adjust the type accordingly
+  favourite: Location[];
 }
 
 const WeatherContext = createContext<WeatherContextType>({

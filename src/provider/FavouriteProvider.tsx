@@ -7,7 +7,7 @@ interface FavouriteProviderProps {
 }
 
 export const FavouriteProvider: React.FC<FavouriteProviderProps> = ({ children }) => {
-  const [favourite, setFavourite] = useLocalStorage("favourites", [] as any[]); // Set initial type as any[]
+  const [favourite, setFavourite] = useLocalStorage("favourites", [] as any[]);
 
   const addToFavourite = (lat: number, long: number, location: string) => {
     setFavourite([...favourite, { latitude: lat, longitude: long, location: location }]);
