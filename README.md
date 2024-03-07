@@ -22,7 +22,7 @@ This is a user-friendly Weather App offering instant and accurate weather update
 Check out the live demo: [Weather-App Demo](https://weather-dashboard-4.vercel.app/)
 
 ## Screenshots
-![]([./images/weather.png](https://i.postimg.cc/Y9MzqsVM/image.png))
+![Weather App Screenshot](https://i.postimg.cc/Y9MzqsVM/image.png)
 
 ## License
 
