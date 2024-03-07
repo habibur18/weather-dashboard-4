@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a user-friendly Weather App offering instant and accurate weather updates for any location. Powered by OpenWeatherMap API.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- HTML
+- CSS
+- Tailwind
+- JavaScript (ES6 modules)
+- Webpack
+- Date-fns library
+- Git
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Current Weather:** Get the current temperature, weather condition, humidity, wind speed, and more.
+- **Forecast:** View a detailed weather forecast for the next 5 days, including temperature highs and lows.
+- **Search:** Easily find the weather for any location by searching for city names or using coordinates.
+- **Full Responsiveness:** A seamless experience across various screen sizes, ensuring it's accessible on desktops, tablets, and mobile devices.
 
-- Configure the top-level `parserOptions` property like this:
+## Demo
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Check out the live demo: [Weather-App Demo](https://eliptik1.github.io/weather-app/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Screenshots
+![](./images/weather.png)
+
+## License
+
+This project is open-source and available under the MIT License.
