@@ -286,5 +286,4 @@ async function getLocationByName(location: string) {
   };
   return locationDetails;
 }
-
 export { getLocationByName, getLocationData };
