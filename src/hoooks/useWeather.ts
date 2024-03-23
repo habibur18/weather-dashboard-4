@@ -54,7 +54,7 @@ const useWeather = () => {
         state: true,
         message: "Fetching weather data...",
       });
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=424806f5d3c0ca5d807782443f9552cf
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=424806f5d3c0ca5d807782443f9552cf&units=metric
       `);
       console.log("response", response);
       if (!response.ok) {
