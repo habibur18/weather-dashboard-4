@@ -54,8 +54,9 @@ const useWeather = () => {
         state: true,
         message: "Fetching weather data...",
       });
-      // Todo: Fetch weather data from api
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`);
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=424806f5d3c0ca5d807782443f9552cf
+      `);
+      console.log("response", response);
       if (!response.ok) {
         const errorMessage = `Fetching weather data failed : ${response.status}`;
         throw new Error(errorMessage);
