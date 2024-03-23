@@ -40,7 +40,8 @@ Follow these steps to build and deploy the Weather App:
 
 2. **Install Dependency**
 
-   ```npm install
+   ```
+   npm install
 
    ```
 
