@@ -24,7 +24,7 @@ Check out the live demo: [Weather-App Demo](https://weather-dashboard-4.vercel.a
 
 ## Screenshots
 
-![Weather App Screenshot](https://i.postimg.cc/Y9MzqsVM/image.png)
+![Weather App Screenshot](https://i.postimg.cc/85C9J9JX/Screenshot-2024-03-23-095823.png)
 
 ## Build & Deploy
 
