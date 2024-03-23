@@ -47,24 +47,23 @@ Follow these steps to build and deploy the Weather App:
 
 #### or
 
-       yarn install
-
-````
+       yarn install ```
 
 3. **Set up Environment Variables**
-VITE_WEATHER_API_KEY= your_open_weather_api_key
+   VITE_WEATHER_API_KEY= your_open_weather_api_key
 
 4. **Start the Development Server**
-`npm run dev`
+   `npm run dev`
 
 5. **Deploy to Vercel**
 
-```Install Vercel CLI (if not already installed):
+```
+Install Vercel CLI (if not already installed):
      npm install -g vercel
      # or
      yarn global add vercel
 
-````
+```
 
 6. **Log in to Vercel CLI:**
    `vercel login`
