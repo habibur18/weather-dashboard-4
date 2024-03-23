@@ -1,24 +1,23 @@
 import { useEffect, useRef } from "react";
 
-const useDebounce = (callback: (...args: any[]) => void, delay: number) => {
-  const timeoutIdRef = useRef<number | null>(null); // Specify the type explicitly
+// Define a generic type T for the callback function
+const useDebounce = <T extends (...args: any[]) => void>(callback: T, delay: number) => {
+  const timeoutIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     return () => {
       if (timeoutIdRef.current !== null) {
-        // Check if timeoutIdRef.current is not null
         clearTimeout(timeoutIdRef.current);
       }
     };
   }, []);
 
-  const debouncedCallback = (...args: any[]) => {
+  // Use the Parameters utility type to get the parameter types of the callback function
+  const debouncedCallback = (...args: Parameters<T>) => {
     if (timeoutIdRef.current !== null) {
-      // Check if timeoutIdRef.current is not null
       clearTimeout(timeoutIdRef.current);
     }
     timeoutIdRef.current = setTimeout(() => {
-      // Assign the identifier of the timeout
       callback(...args);
     }, delay);
   };

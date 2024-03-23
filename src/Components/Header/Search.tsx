@@ -4,7 +4,7 @@ import { LocationContext } from "../../context";
 import { getLocationByName } from "../../data/location-data";
 import { useDebounch } from "../../hoooks";
 export default function Search() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const { setSelectedLocation } = useContext(LocationContext);
   // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -12,10 +12,12 @@ export default function Search() {
   //   const fetchdLocation = getLocationByName(searchTerm);
   //   setSelectedLocation({ ...fetchdLocation });
   // };
-  const doSearch = useDebounch((term: string) => {
-    const fetchdLocation = getLocationByName(term);
+  const doSearch = useDebounch(async (term: string) => {
+    const fetchdLocation = await getLocationByName(term);
     if (fetchdLocation && fetchdLocation.location && fetchdLocation.latitude !== undefined && fetchdLocation.longitude !== undefined) {
       setSelectedLocation(fetchdLocation);
+    } else {
+      // setSelectedLocation({ location: "London", latitude: 51.5085, longitude: -0.1257 });
     }
   }, 500);
 

@@ -264,19 +264,27 @@ const data = [
 function getLocationData() {
   return data;
 }
-function getLocationByName(location: string) {
-  if (!location) return null;
-  const filtered = data.filter((item) => item.location.toLowerCase() === location.toLowerCase());
-  if (filtered.length > 0) {
-    return filtered[0];
-  } else {
-    const defaultLocation = {
-      location: "",
-      latitude: 0,
-      longitude: 0,
-    };
-    return defaultLocation;
-  }
+async function getLocationByName(location: string) {
+  // if (!location) return null;
+  // const filtered = data.filter((item) => item.location.toLowerCase() === location.toLowerCase());
+  // if (filtered.length > 0) {
+  //   return filtered[0];
+  // } else {
+  //   const defaultLocation = {
+  //     location: "",
+  //     latitude: 0,
+  //     longitude: 0,
+  //   };
+  //   return defaultLocation;
+  // }
+  const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`);
+  const data = await res.json();
+  const locationDetails = {
+    location: data?.name,
+    latitude: data?.coord?.lat,
+    longitude: data?.coord?.lon,
+  };
+  return locationDetails;
 }
 
 export { getLocationByName, getLocationData };
