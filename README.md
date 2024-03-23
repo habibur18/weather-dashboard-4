@@ -50,7 +50,9 @@ Follow these steps to build and deploy the Weather App:
        yarn install ```
 
 3. **Set up Environment Variables**
-   VITE_WEATHER_API_KEY= your_open_weather_api_key
+   Create a .env file in the root directory of your project and add your API key:
+
+   `VITE_WEATHER_API_KEY= your_open_weather_api_key`
 
 4. **Start the Development Server**
    `npm run dev`
